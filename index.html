@@ -18,17 +18,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script>
+        function darkmode() {
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            let as = document.querySelectorAll('a');
+            for(let i=0;i<as.length;i=i+1){
+                as[i].style.color='white';
+            }
+        }    
+        function whitemode() {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            let as = document.querySelectorAll('a');
+            for(let i=0;i<as.length;i=i+1){
+                as[i].style.color='black';
+        }
+    }
 
-    <input type="button" id="dnbtn" value="DarkMode" onclick="
-    let button = document.querySelector('#dnbtn');
+    </script>
+
+    <input type="button" value="DarkMode" onclick="
+    let button = this;
     if(button.value === 'DarkMode'){
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
+        darkmode();
         button.value = 'WhiteMode';
         } else {
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-        button.value = 'DarkMode'
+            whitemode();
+            button.value = 'DarkMode';
         }
     ">
 
