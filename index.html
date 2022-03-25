@@ -3,26 +3,7 @@
 <head>
     <title>WEB!!</title>
     <meta charset="tuf-8">
-    <style>
-        h1{
-            border-bottom: 10px solid red;
-            padding:30px;
-        }
-
-        @media all and (min-width: 720px){ 
-            #container{
-            display: grid;
-            grid-template-columns: 150px 1fr;
-        }
-    }
-        
-        @media all and (max-width: 720px) {
-        }
-
-        body{
-            font-family: 'Nanum Myeongjo', serif;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F22S123FG6"></script>
 <script>
@@ -37,14 +18,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <input type="button" value="DarkMode" onclick="
+
+    <input type="button" id="dnbtn" value="DarkMode" onclick="
+    let button = document.querySelector('#dnbtn');
+    if(button.value === 'DarkMode'){
         document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';">
-    
-    
-    <input type="button" value="WhiteMode" onclick="
+        document.querySelector('body').style.color = 'white';
+        button.value = 'WhiteMode';
+        } else {
         document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';">
+        document.querySelector('body').style.color = 'black';
+        button.value = 'DarkMode'
+        }
+    ">
+
+
     <h1><a href="index.html">WEB</a></h1>
 <div id="container">
     <ol>
